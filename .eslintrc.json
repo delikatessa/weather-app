@@ -1,0 +1,109 @@
+{
+	"env": {
+		"node": true,
+		"mocha": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"extends": ["prettier", "eslint:recommended"],
+	"globals": {
+		"Promise": false,
+		"JSON": false
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": "error",
+		"valid-jsdoc": "warn",
+		"array-callback-return": "error",
+		"block-scoped-var": "error",
+		"class-methods-use-this": "warn",
+		"complexity": [
+			"warn",
+			{
+				"max": 10
+			}
+		],
+		"eqeqeq": "error",
+		"require-jsdoc": [
+			"warn",
+			{
+				"require": {
+					"FunctionDeclaration": false,
+					"MethodDefinition": true,
+					"ClassDeclaration": true,
+					"ArrowFunctionExpression": false
+				}
+			}
+		],
+		"consistent-return": "warn",
+		"default-case": "warn",
+		"no-console": "error",
+		"no-alert": "error",
+		"no-caller": "error",
+		"no-else-return": "warn",
+		"no-empty-function": "warn",
+		"no-eq-null": "warn",
+		"no-eval": "warn",
+		"no-extend-native": "error",
+		"no-invalid-this": "error",
+		"no-implicit-coercion": "warn",
+		"no-iterator": "error",
+		"no-lone-blocks": "warn",
+		"no-loop-func": "error",
+		"no-magic-numbers": [
+			"warn",
+			{
+				"ignore": [-1, 0, 1]
+			}
+		],
+		"no-new": "error",
+		"no-new-func": "error",
+		"no-new-wrappers": "error",
+		"no-param-reassign": "warn",
+		"no-return-await": "error",
+		"no-self-compare": "error",
+		"no-sequences": "warn",
+		"no-template-curly-in-string": "error",
+		"no-throw-literal": "error",
+		"no-void": "error",
+		"require-await": "error",
+		"vars-on-top": "warn",
+		"yoda": "error",
+		"no-undefined": "error",
+		"no-undef-init": "error",
+		"no-unused-vars": "warn",
+		"callback-return": "warn",
+		"global-require": "warn",
+		"no-new-require": "error",
+		"no-mixed-requires": "error",
+		"max-depth": ["warn", 3],
+		"max-params": ["warn", 3],
+		"no-useless-constructor": "error",
+		"prefer-arrow-callback": "warn"
+	},
+	"overrides": [
+		{
+			"files": ["test/*.js", "test/*/*.js"],
+			"rules": {
+				"no-magic-numbers": 0,
+				"no-console": 0,
+				"no-invalid-this": 0,
+				"no-new": 0,
+				"array-callback-return": 0
+			}
+		},
+		{
+			"files": ["assets/webview/js/*.js"],
+			"rules": {
+				"no-undef": 0,
+				"prefer-arrow-callback": 0
+			}
+		}
+	]
+}
